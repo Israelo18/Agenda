@@ -5,9 +5,14 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import org.izv.ir.agenda.data.plain.Contact
+import org.izv.ir.agenda.data.repository.ContactFileRepository
+import org.izv.ir.agenda.ui.viewmodel.ContactFileViewModel
 
 @Composable
 fun MainScreen() {
@@ -19,6 +24,11 @@ fun MainScreen() {
 @Composable
 fun Navigation(innerPadding: PaddingValues) {
     val navController = rememberNavController()
+
+    val context = LocalContext.current
+    val repository = ContactFileRepository = (context)
+    val viewModel: ContactFileViewModel.Factory
+
     NavHost(
         navController = navController,
         startDestination = "home-screen"

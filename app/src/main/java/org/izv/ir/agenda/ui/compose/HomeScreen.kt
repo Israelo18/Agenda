@@ -15,9 +15,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import org.izv.ir.agenda.ui.viewmodel.ContactFileViewModel
 
 @Composable // FALTAN COSAS?
-fun HomeScreen(navController: NavController, innerPadding: PaddingValues) {
+fun HomeScreen(
+    navController: NavController,
+    viewModel: ContactFileViewModel,
+    innerPadding: PaddingValues) {
     val contactos = listOf("one", "two", "three", "four", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "")
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
